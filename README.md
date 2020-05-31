@@ -22,5 +22,13 @@ kubectl apply -f raw/tiller-user.yaml
 
 ## Install the kube-utils
 ```
-helm install -f kube-utils/values.yaml ./kube-utils
+helm install -f kube-utils/values.yaml kube-utils ./kube-utils
+```
+
+## Install the backend
+```
+helm install -f backend/values.yaml backend ./backend
+
+//upgrade to new version
+helm upgrade -f backend/values.yaml backend ./backend
 ```
