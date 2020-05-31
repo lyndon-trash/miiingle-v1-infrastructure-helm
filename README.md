@@ -14,3 +14,13 @@ tar -zxvf helm-v3.0.0-linux-amd64.tar.gz
 ```
 sudo mv linux-amd64/helm /usr/local/bin/helm
 ```
+
+## Add Tiller User
+```
+kubectl apply -f raw/tiller-user.yaml
+```
+
+## Install the kube-utils
+```
+helm install -f kube-utils/values.yaml ./kube-utils
+```
