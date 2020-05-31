@@ -7,6 +7,8 @@ metadata:
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-type: nlb
     service.beta.kubernetes.io/aws-load-balancer-internal: "true"
+    #TODO: add these as values
+    service.beta.kubernetes.io/aws-load-balancer-additional-resource-tags: "Project=Miiingle.NET,owner=terraform,BillingCode=MN_PROD-01"
 spec:
   type: {{ .Values.service.type }}
   ports:
